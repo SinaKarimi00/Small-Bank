@@ -66,6 +66,7 @@ public class HeapSort {
             Console.WriteLine(arr[i] + " ");
         }
         Console.ResetColor();
+        Console.Read();
     }
 }
 }

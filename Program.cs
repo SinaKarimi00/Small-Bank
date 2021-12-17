@@ -24,7 +24,6 @@ namespace Small_Bank
 
         static void ShowItems()
         {
-            Console.Clear();
             Console.WriteLine("1- Create new account");
             Console.WriteLine("2- Update account");
             Console.WriteLine("3- Create new account");
@@ -41,6 +40,7 @@ namespace Small_Bank
             switch (num)
             {
                 case 1:
+                Console.Clear();
                 CreatePerson();
 
                 break;
