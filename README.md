@@ -1,2 +1,2 @@
-# SmallBanck
+# SmallBank
 This is a small bank that you can create an account, update your account and ...
