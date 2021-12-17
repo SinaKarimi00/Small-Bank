@@ -1,0 +1,16 @@
+D:\Bank\Small-Bank\bin\Debug\net5.0\Small-Bank.exe
+D:\Bank\Small-Bank\bin\Debug\net5.0\Small-Bank.deps.json
+D:\Bank\Small-Bank\bin\Debug\net5.0\Small-Bank.runtimeconfig.json
+D:\Bank\Small-Bank\bin\Debug\net5.0\Small-Bank.runtimeconfig.dev.json
+D:\Bank\Small-Bank\bin\Debug\net5.0\Small-Bank.dll
+D:\Bank\Small-Bank\bin\Debug\net5.0\ref\Small-Bank.dll
+D:\Bank\Small-Bank\bin\Debug\net5.0\Small-Bank.pdb
+D:\Bank\Small-Bank\obj\Debug\net5.0\Small-Bank.csproj.AssemblyReference.cache
+D:\Bank\Small-Bank\obj\Debug\net5.0\Small-Bank.GeneratedMSBuildEditorConfig.editorconfig
+D:\Bank\Small-Bank\obj\Debug\net5.0\Small-Bank.AssemblyInfoInputs.cache
+D:\Bank\Small-Bank\obj\Debug\net5.0\Small-Bank.AssemblyInfo.cs
+D:\Bank\Small-Bank\obj\Debug\net5.0\Small-Bank.csproj.CoreCompileInputs.cache
+D:\Bank\Small-Bank\obj\Debug\net5.0\Small-Bank.dll
+D:\Bank\Small-Bank\obj\Debug\net5.0\ref\Small-Bank.dll
+D:\Bank\Small-Bank\obj\Debug\net5.0\Small-Bank.pdb
+D:\Bank\Small-Bank\obj\Debug\net5.0\Small-Bank.genruntimeconfig.cache

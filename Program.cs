@@ -1,21 +1,24 @@
 ﻿using System;
-
+using System.Collections.Generic;
 namespace Small_Bank
 {
-    struct Person
-    {
-        public string name;
-        public int age;
-        public float money;
-    }
+    // struct Person
+    // {
+    //     public string name;
+    //     public int age;
+    //     public float money;
+    // }
     
     class Program
     {
-        static Person [] member = new Person[2];
+        static int [] ar;
+
+        // static Person [] member = new Person[100];
+        public static List <User> listOfUser = new List<User>();
         static int i =0;
         static void Main(string[] args)
         {
-        
+           
             ShowItems();
         }
 
@@ -27,7 +30,7 @@ namespace Small_Bank
             Console.WriteLine("4- Transactions");
             Console.WriteLine("5- Remove account");
             Console.WriteLine("6- Show all persons");
-            Console.WriteLine("Enter the number: ");
+            Console.Write("Enter the number: ");
             int x = Convert.ToInt32(Console.ReadLine());
             Choise(x);
         }
@@ -41,7 +44,6 @@ namespace Small_Bank
 
                 break;
                 case 2:
-
                 break;
                 case 3:
 
@@ -67,23 +69,61 @@ namespace Small_Bank
 
         static void CreatePerson()
         {
-            Console.WriteLine("Enter the name");
-            member[i] = new Person();
-            member[i].name = Console.ReadLine();
-            i++;
+            Console.Clear();
+            Console.Write("Enter the name:  ");
+            string name = Console.ReadLine();
+            Console.Write("Enter the Age:  ");
+            int age = Convert.ToInt32(Console.ReadLine());
+            listOfUser.Add(new User(name,age));
             ShowItems();
         }
 
         static void ShowAllMembers()
         {
             Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Blue;
-            foreach (var item in member)
+            Console.WriteLine("1- Alphabetical order");
+            Console.Write("Enter the number: ");
+            int num = Convert.ToInt32(Console.ReadLine());
+            switch (num)
             {
-                Console.WriteLine(item.name);
+                case 1:
+                Alphabeticalorder();
+                break;
+                default:
+                Console.ForegroundColor = ConsoleColor.Red; //set red color
+                Console.WriteLine("Your number isn't exist Try again");
+                Console.ResetColor(); // remove red color
+                ShowAllMembers();
+                break;
             }
-            Console.ResetColor();
+            // Console.ForegroundColor = ConsoleColor.Blue;
+            // foreach (var item in listOfUser)
+            // {
+            //     Console.WriteLine(item.Name);
+            // }
+            // Console.ResetColor();
         }
+
+        static void Alphabeticalorder()
+        {
+        HeapSort ob = new HeapSort();
+        List<int> ages = new List<int>();
+        List<string> names = new List<string>();
+        foreach (var item in listOfUser)
+        {
+            ages.Add(item.Age);
+            names.Add(item.Name);
+        }
+        ob.sort(ages, names);
+        ob.printArray(ages, names);
+            // int [] ages;
+            // int i;
+            // foreach (var item in listOfUser)
+            // {
+            //     ages[i] = item.Age;
+            // } 
+        }
+
 
     }
 }
