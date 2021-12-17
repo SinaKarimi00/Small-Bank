@@ -59,11 +59,13 @@ public class HeapSort {
     public void printArray(List<int> arr,List<string> nameArr)
     {
         int n = arr.Count;
+        Console.ForegroundColor = ConsoleColor.Blue;
         for (int i = 0; i < n; ++i)
         {
             Console.Write(nameArr[i] + " ");
             Console.WriteLine(arr[i] + " ");
         }
+        Console.ResetColor();
     }
 }
 }

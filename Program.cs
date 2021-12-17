@@ -24,6 +24,7 @@ namespace Small_Bank
 
         static void ShowItems()
         {
+            Console.Clear();
             Console.WriteLine("1- Create new account");
             Console.WriteLine("2- Update account");
             Console.WriteLine("3- Create new account");
@@ -81,7 +82,7 @@ namespace Small_Bank
         static void ShowAllMembers()
         {
             Console.Clear();
-            Console.WriteLine("1- Alphabetical order");
+            Console.WriteLine("1- Age order");
             Console.Write("Enter the number: ");
             int num = Convert.ToInt32(Console.ReadLine());
             switch (num)
@@ -116,12 +117,6 @@ namespace Small_Bank
         }
         ob.sort(ages, names);
         ob.printArray(ages, names);
-            // int [] ages;
-            // int i;
-            // foreach (var item in listOfUser)
-            // {
-            //     ages[i] = item.Age;
-            // } 
         }
 
 
