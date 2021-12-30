@@ -3,6 +3,7 @@ using System.Collections.Generic;
 namespace Small_Bank
 {
 public class HeapSort {
+        
     public void sort(List<int> arr, List<string> names)
     {
         int n = arr.Count;
@@ -66,7 +67,7 @@ public class HeapSort {
             Console.WriteLine(arr[i] + " ");
         }
         Console.ResetColor();
-        Console.Read();
+        Console.ReadLine();
     }
 }
 }
