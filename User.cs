@@ -12,14 +12,17 @@ class User
     }
     public string Name
     {
+        set {name = value;}
         get{return name;}
     }
     public int Age
     {
+        set {age = value;}
         get{return age;}
     }
     public int Pass
     {
+        set {pass = value;}
         get{return pass;}
     }
 }

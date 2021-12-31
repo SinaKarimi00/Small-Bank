@@ -19,7 +19,7 @@ using System.Collections.Generic;
 
 namespace Small_Bank
 {
-class GFG {
+class BST {
 
 	/* A binary tree node has key, pointer to
 	left child and a pointer to right child */
@@ -103,6 +103,54 @@ class GFG {
         bool res2 = ifNodeExists(node.right, key, name);
     
         return res2;
+    }
+
+
+    public static void deleteKey(int key, string name) { root = deleteRec(root, key, name); }
+ 
+    /* A recursive function to
+      delete an existing key in BST
+     */
+    public static Node deleteRec(Node root, int key, string name)
+    {
+        /* Base Case: If the tree is empty */
+        if (root == null)
+            return root;
+ 
+        /* Otherwise, recur down the tree */
+        if (key < root.key)
+            root.left = deleteRec(root.left, key, name);
+        else if (key > root.key)
+            root.right = deleteRec(root.right, key, name);
+ 
+        // if key is same as root's key, then This is the
+        // node to be deleted
+        else {
+            // node with only one child or no child
+            if (root.left == null)
+                return root.right;
+            else if (root.right == null)
+                return root.left;
+ 
+            // node with two children: Get the
+            // inorder successor (smallest
+            // in the right subtree)
+            root.key = minValue(root.right);
+ 
+            // Delete the inorder successor
+            root.right = deleteRec(root.right, root.key, root.name);
+        }
+        return root;
+    }
+ 
+    public static int minValue(Node root)
+    {
+        int minv = root.key;
+        while (root.left != null) {
+            minv = root.left.key;
+            root = root.left;
+        }
+        return minv;
     }
 
 	// Driver code

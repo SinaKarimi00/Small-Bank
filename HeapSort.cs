@@ -4,6 +4,7 @@ namespace Small_Bank
 {
 public class HeapSort {
         
+        public static int count;
     public void sort(List<int> arr, List<string> names)
     {
         int n = arr.Count;
@@ -63,11 +64,23 @@ public class HeapSort {
         Console.ForegroundColor = ConsoleColor.Blue;
         for (int i = 0; i < n; ++i)
         {
-            Console.Write(nameArr[i] + " ");
-            Console.WriteLine(arr[i] + " ");
+            if (nameArr[i] != null)
+            {
+                Console.Write(nameArr[i] + " ");
+                Console.WriteLine(arr[i] + " ");
+            }
+
+            else
+                count++;
+            
         }
         Console.ResetColor();
-        Console.ReadLine();
+        if (count == n)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("It's empty");
+            Console.ResetColor();
+        }
     }
 }
 }
